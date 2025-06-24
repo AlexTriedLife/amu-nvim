@@ -1,0 +1,6 @@
+require("core.plugconf.telescope")
+require("core.plugconf.treesitter")
+require("core.plugconf.mason")
+require("core.plugconf.lspconf")
+require("core.plugconf.completions")
+require("core.plugconf.nvtree_conf")

@@ -9,13 +9,14 @@ require("lazy").setup({
 
 
 	 -- completion
+	-- mason should be before lsp
+	  "williamboman/mason.nvim",
+	  "williamboman/mason-lspconfig.nvim",
 	  "hrsh7th/nvim-cmp",
 	  "hrsh7th/cmp-nvim-lsp",
 	  "L3MON4D3/LuaSnip",
 	  "saadparwaiz1/cmp_luasnip",
 	  "rafamadriz/friendly-snippets",
-	  "williamboman/mason.nvim",
-	  "williamboman/mason-lspconfig.nvim",
 	  "WhoIsSethDaniel/mason-tool-installer.nvim",
   dependencies = { "williamboman/mason.nvim" },
 

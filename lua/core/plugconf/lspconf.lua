@@ -15,7 +15,7 @@ lspconfig.lua_ls.setup({
 	path = vim.split(package.path, ";"),
       },
       diagnostics = {
-        globals = { 'vim' },
+        globals = { "vim" },
       },
       workspace = {
         library = {
@@ -24,18 +24,13 @@ lspconfig.lua_ls.setup({
         },
 	checkThirdParty = false,
       },
-    },
       telemetry = {
 	  enable = false,
 	},
+    },
   },
 })
 
-lspconfig.clangd.setup{
-	filetypes = {'h','hpp','c','cpp','cxx'}
-}
-
-lspconfig.gopls.setup{}
 
 
 

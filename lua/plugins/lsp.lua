@@ -15,6 +15,7 @@ local M = {
 						"lua_ls",
 						"pyright",
 						"jsonls",
+						"ruby_lsp",
 					},
 					automatic_installation = true,
 				})
@@ -54,6 +55,16 @@ local M = {
 		-- Other language servers
 		lspconfig.pyright.setup({ capabilities = capabilities })
 		lspconfig.jsonls.setup({ capabilities = capabilities })
+		lspconfig.ruby_lsp.setup({
+			cmd = { "bundle", "exec", "ruby", "-S", "ruby-lsp" },
+			filetypes = { "ruby", "eruby" },
+			root_dir = require("lspconfig.util").root_pattern("Gemfile", ".git"),
+			init_options = {
+				formatter = "auto",
+			},
+
+			capabilities = capabilities,
+		})
 	end,
 }
 
